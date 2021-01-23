@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-eHealth</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          [{'v':'Mike', 'f':'Mike<div style="color:red; font-style:italic">President</div>'},
+           '', 'The President'],
+          [{'v':'Jim', 'f':'Jim<div style="color:red; font-style:italic">Vice President</div>'},
+           'Mike', 'VP'],
+          ['Alice', 'Mike', ''],
+          ['Bob', 'Jim', 'Bob Sponge'],
+          ['Carol', 'Bob', '']
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {'allowHtml':true});
+      }
+   </script>  
+</head>
+<body>
+</section>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+      <a class="navbar-brand" href="#footer">
+          <img src="img1/logo.jpeg" width="150" height="100" alt="App logo">
+        </a>
+        <a class="navbar-brand" href="#" id="logo"><b><h1>Covid-eHealth</h1></b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <br>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://127.0.0.1:5500/1welcome.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/7.2news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/8.chart.html">Statistics</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<section>
+  <section>
+    <div class="container"></div>
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+              <img src="img1/doctor fr.jpg" alt="covide img" style="width:100%;">
+              <div class="carousel-caption">
+                <div id="banner">
+                  <nav class="nav nav-pills flex-column">
+                    <div id="soutitre" ><h3>le Navbar de la documentation</h3></div>
+                    <br>
+                    <a class="nav-link" class="btn btn-dark"  href="#item-1"><b>Introduction de l'application</b></a>
+                    <nav class="nav nav-pills flex-column">
+                      <a class="nav-link ml-18 " href="#item-1-1">Les fonctions de l'application</a>
+                      <a class="nav-link ml-18 " href="#item-1-2">les modes d'utilisation </a>
+                    </nav>
+                    <a class="nav-link" href="#item-2"><b>Le service ALLO 2020</b></a>
+                    <nav class="nav nav-pills flex-column">
+                      <a class="nav-link ml-18" href="#item-2-1">Inscription</a>
+                      <a class="nav-link ml-18 " href="#item-2-2">La consultation</a>
+                    </nav>
+                    <a class="nav-link" href="#item-3"><b>Agent d'acceuil</b></a>
+                    <nav class="nav nav-pills flex-column">
+                      <a class="nav-link ml-18" href="#item-3-1">insription</a>
+                      <a class="nav-link ml-18 " href="#item-3-2">Messagerie</a>
+                      <a class="nav-link ml-18 " href="#item-3-3">Service de réanimation</a>
+                      <a class="nav-link ml-18 " href="#item-3-4">Service d'isolement</a>
+                    </nav>
+                    <a class="nav-link" href="#item-4"><b>Le Medecin</b></a>
+                    <nav class="nav nav-pills flex-column">
+                      <a class="nav-link ml-18 " href="#item-4-1">Authentification </a>
+                      <a class="nav-link ml-18 " href="#item-4-2">La stabilité</a>
+                      <a class="nav-link ml-18 " href="#item-4-3">L'affectation</a>
+                    </nav>
+                    <a class="nav-link" href="#item-5"><b>L'infirmier</b></a>
+                    <nav class="nav nav-pills flex-column">
+                      <a class="nav-link ml-18 " href="#item-5-1">Authentification</a>
+                      <a class="nav-link ml-18 " href="#item-5-2">Consultation</a>
+                    </nav>
+                  </nav>
+                </div>
+         </div>
+</section>
+         <br>
+         <br>  
+         <!-- 16:9 aspect ratio -->
+         <a href="https://www.thesitewizard.com/general/embed-youtube-video-copyright-matters.shtml" target="_top">Is it Okay to Post YouTube Videos on My Website? (Copyright Question)</a>
+      <div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+        <h4 id="item-1">Introduction de l'application</h4>
+
+        <p>  C’est dans cette perspective que nous avons choisi une problématique relative à l’épidémie Covid19 et ses conséquences sanitaires que nous constatons actuellement et qui se traduit par la mauvaise gestion dans les hôpitaux et la perte de données. Donc dans l’objectif d’améliorer les conditions de travail du staff sanitaire travaillant au sein de l’hôpital, de protéger les données et les regrouper, de faciliter la gestion des patients et dans le cadre .</p>
+            <div id="chart_div"></div>
+        <h5 id="item-1-1">les fonctionalité</h5>
+        <p>    C’est dans cette perspective que nous avons choisi une problématique relative à l’épidémie Covid19 et ses conséquences sanitaires que nous constatons actuellement et qui se traduit par la mauvaise gestion dans les hôpitaux et la perte de données. Donc dans l’objectif d’améliorer les conditions de travail du staff sanitaire travaillant au sein de l’hôpital, de protéger les données et les regrouper, de faciliter la gestion des patients et dans le cadre 
+            While containers can be nested, most layouts do not require a nested container.</p>
+        <h5 id="item-1-2">Les modes d'utilisation</h5>
+        <p>    C’est dans cette perspective que nous avons choisi une problématique relative à l’épidémie Covid19 et ses conséquences sanitaires que nous constatons actuellement et qui se traduit par la mauvaise gestion dans les hôpitaux et la perte de données. Donc dans l’objectif d’améliorer les conditions de travail du staff sanitaire travaillant au sein de l’hôpital, de protéger les données et les regrouper, de faciliter la gestion des patients et dans le cadre 
+
+            While containers can be nested, most layouts do not require a nested container.</p>
+
+        <h4 id="item-2">Le service Allo2020</h4>
+        <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+
+            While containers can be nested, most layouts do not require a nested container.</p>
+    
+                While containers can be nested, most layouts do not require a nested container.</p>
+            <h5 id="item-2-1">Inscription</h5>
+            <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+    
+                While containers can be nested, most layouts do not require a nested container.</p>
+            <h5 id="item-2-2">Consultation</h5>
+            <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+    
+                While containers can be nested, most layouts do not require a nested container.</p>
+
+
+        <h4 id="item-3">Agent d'acceuil</h4>
+        <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+
+            While containers can be nested, most layouts do not require a nested container.</p>
+        <h5 id="item-3-1">Inscription </h5>
+        <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+
+            While containers can be nested, most layouts do not require a nested container.</p>
+        <h5 id="item-3-2">Messagerie</h5>
+        <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+
+            While containers can be nested, most layouts do not require a nested container.</p>
+            <h5 id="item-3-3">Le service de réanimation</h5>
+            <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+    
+                While containers can be nested, most layouts do not require a nested container.</p>
+            <h5 id="item-3-4">Le service d'isolement</h5>
+            <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+
+              <h4 id="item-4">Medecin</h4>
+              <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+      
+                  While containers can be nested, most layouts do not require a nested container.</p>
+              <h5 id="item-4-1">Authentification</h5>
+              <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+      
+                  While containers can be nested, most layouts do not require a nested container.</p>
+              <h5 id="item-4-2">La stabilité</h5>
+              <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+      
+                  While containers can be nested, most layouts do not require a nested container.</p>
+                  <h5 id="item-4-3">L'affectation</h5>
+                  <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+          
+                      While containers can be nested, most layouts do not require a nested container.</p>  
+                      <h4 id="item-5">L'infirmier</h4>
+                      <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+              
+                          While containers can be nested, most layouts do not require a nested container.</p>
+                      <h5 id="item-5-1">Authentification</h5>
+                      <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+              
+                          While containers can be nested, most layouts do not require a nested container.</p>
+                      <h5 id="item-5-2">Consultation</h5>
+                      <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time).
+              
+                          While containers can be nested, most layouts do not require a nested container.</p>
+                 
+      </div>
+</section>
+</body>
+<footer  id="footer" class="page-footer font-small unique-color-dark">
+
+    <div style="background-color:#212529;">
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h5 class="mb-0">Get connected with us on social networks!</h5>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">App goal</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>l'application <b> Covid-eHealth</b> vise à gestionner les patients atteints par le covid 19 au sein d'un hopital  </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">MDBootstrap</a>
+          </p>
+          <p>
+            <a href="#!">MDWordPress</a>
+          </p>
+          <p>
+            <a href="#!">BrandFlow</a>
+          </p>
+          <p>
+            <a href="#!">Bootstrap Angular</a>
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">Your Account</a>
+          </p>
+          <p>
+            <a href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> 32, Angle Avenue Oqba et Fal ouled oumeir, Rabat</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> Covid-eHealth@gmail.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> 06 61 45 76 23</p>
+          <p>
+            
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    
+  
+  </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

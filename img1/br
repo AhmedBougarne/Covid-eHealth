@@ -1,0 +1,65 @@
+$sql="select * from loginin where Email='".$email."' AND password='".$pwd."' " ;
+if(isset(['email'])){
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+  $sql="select * from loginin where Email='".$email."' AND password='".$password."' " ;
+  if(!mysqli_query($con,$sql)){
+    echo 'you have entered incorrect password';
+    exit(); 
+   }       
+  else{ 
+    echo 'you ve successfully logged in';
+  }
+  $email=$_POST['email'];
+$pwd=$_POST['password'];
+session_start();
+if (isset($_POST['email'])){
+  $username = stripslashes($_REQUEST['email']);
+  $username = mysqli_real_escape_string($con, $email);
+  $password = stripslashes($_REQUEST['password']);
+  $password = mysqli_real_escape_string($con, $pwd);
+ $query = "SELECT * FROM `loginin` WHERE username='$username' and password='".hash('sha256', $password)."'";
+  $result = mysqli_query($con,$query) ;
+  $rows = mysqli_num_rows($result);
+  if($rows==1){
+      $_SESSION['username'] = $username;
+      header("Location: log.html");
+  }else{
+    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+  }
+}
+session_start();
+_________________________________
+$con=mysqli_connect('127.0.0.1','root','');
+if(!$con){
+    echo'Not conneted';
+}
+if(!mysqli_select_db($con,'covid-ehealth')){
+    echo'Database Not selected';
+}
+$email=$_POST['email'];
+$password=$_POST['password'];
+session_start();
+if (isset($_POST['email'])){
+  $username = stripslashes($_REQUEST['email']);
+  $username = mysqli_real_escape_string($con, $email);
+  $password = stripslashes($_REQUEST['password']);
+  $password = mysqli_real_escape_string($con, $password);
+ $query = "SELECT * FROM `loginin` WHERE username='$username' and password='".hash('sha256', $password)."'";
+  $result = mysqli_query($con,$query) ;
+  $rows = mysqli_num_rows($result);
+  if($rows){
+      $_SESSION['username'] = $username;
+      header("Location: log.html");
+  }else{
+    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+  }
+}
+========================
+$email=stripslashes($email);
+$password=stripslashes($email);
+
+$email= mysql_real_escape_string($email);
+$password= mysql_real_escape_string($password);
+===
+header("Location: log.html");

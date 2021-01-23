@@ -1,0 +1,22 @@
+
+.chart{
+    margin:10000x auto;
+    width: 3000px;
+     height: 1000px;
+     
+}
+
+.bar{
+    margin:10000x auto;
+    width: 3000px;
+     height: 1000px;
+     
+}
+#soutitr {
+    color:rgb(7, 5, 5);
+     font-family: "Roboto Slab", serif; 
+     text-align:center; 
+     padding:30px;
+     box-shadow:3px 3px 4px rgba(9, 6, 138, 0.2);
+     border-radius:4px;
+}
